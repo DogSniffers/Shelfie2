@@ -8,14 +8,17 @@ import axios from 'axios';
   constructor(props){
     super(props);
     this.state={
-      inventory:[{name:'a',url:'b',price:666}]
+      inventory:[]
     }
   }
 
-  test = () => {
-    axios.get('/api/inventory', console.log('hit'))
+  getInventory = () => {
+    axios.get('/api/inventory').then(res =>{
+      this.setState({inventory: res.data}).catch(err=>console.log(err))
+    })
   }
   render(){
+    console.log(this.inventory)
   return (
     <div>
       <Header/>
