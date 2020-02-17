@@ -11,6 +11,9 @@ import axios from 'axios';
       inventory:[]
     }
   }
+  componentDidMount(){
+    this.getInventory()
+  };
 
   getInventory = () => {
     axios.get('/api/inventory').then(res =>{

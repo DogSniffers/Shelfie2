@@ -7,7 +7,8 @@ const controller = require('./controller');
 
 app.use(express.json())
 
-app.get('/api/inventory', controller.getInventory)
+app.get('/api/inventory', controller.getInventory);
+app.post('/api/product', controller.addProduct);
 
 massive({
     connectionString: CONNECTION_STRING,
