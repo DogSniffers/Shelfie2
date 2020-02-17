@@ -7,7 +7,7 @@ import Header from './Components/Header/Header';
   constructor(props){
     super(props);
     this.state={
-      inventory:[1,2,3]
+      inventory:[{name:'a',url:'b',price:666}]
     }
   }
   render(){
