@@ -6,10 +6,20 @@ export default class Dashboard extends Component{
         super()
     }
 
+    // inventory = []
+
+    componentDidMount(){
+      this.inventoryList()
+    }
+    inventoryList(){
+        console.log('hit')
+    }
+
     render(){
         return(
-            <div>Dashboard
+            <div>Dashboard{this.props.inventory}
                 <Product/>
+            
             </div>
         )
     }

@@ -26,7 +26,7 @@ export default class Form extends Component{
     }
 
     render(){
-        console.log(this.state)
+        // console.log(this.state)
         return(
             <div>
                 <input onChange={(e) => this.handleChangeImageUrl(e.target.value)}></input>
