@@ -7,7 +7,7 @@ const controller = require('./controller');
 
 app.use(express.json())
 
-
+app.get('/api/inventory', controller.test)
 massive({
     connectionString: CONNECTION_STRING,
     ssl:{
